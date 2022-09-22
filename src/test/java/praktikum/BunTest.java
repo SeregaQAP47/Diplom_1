@@ -10,7 +10,6 @@ public class BunTest {
     private float priceBun = 303.5F;
     private Bun bun;
 
-
     @Test
     public void testGetName() {
         bun = new Bun(nameBun, priceBun);
@@ -20,7 +19,8 @@ public class BunTest {
     @Test
     public void getPrice() {
         bun = new Bun(nameBun, priceBun);
-        assert priceBun == bun.getPrice();
+        assertTrue(priceBun == bun.getPrice());
+
     }
 
 }

@@ -9,7 +9,7 @@ public class IngredientTypeTest {
     @Test
     public void valuesIngredientType() {
         IngredientType[] values = IngredientType.values();
-        assert values.length == 2;
+        assertEquals(2, values.length);
     }
 
     @Test

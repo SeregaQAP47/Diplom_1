@@ -14,7 +14,6 @@ public class IngredientTest {
     private final String type;
     Ingredient ingredient;
 
-
     public IngredientTest(String type, String name, float price) {
         this.type = type;
         this.name = name;
@@ -22,7 +21,7 @@ public class IngredientTest {
 
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: тип {0}, название {1}, цена {2}")
     public static Object[][] getData() {
         return new Object[][]{
                 {"FILLING", "Котлета", 1390f},
@@ -33,7 +32,7 @@ public class IngredientTest {
     @Test
     public void testGetPrice() {
         ingredient = new Ingredient(IngredientType.valueOf(type), name, price);
-        assert (price == ingredient.getPrice());
+        assertTrue(price == ingredient.getPrice());
     }
 
     @Test
